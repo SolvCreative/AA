@@ -28,11 +28,11 @@ namespace AA
 
         public static void Main(string[] args)
         {
-            string connectionKey = File.ReadAllText("appsettings.json");
-            JObject jsonObject = JObject.Parse(connectionKey);
-            JToken token = jsonObject["DefaultConnection"];
-            string connString = token.ToString();
-            curiosityRepo.connectionString = connString;
+            //string connectionKey = File.ReadAllText("appsettings.json");
+            //JObject jsonObject = JObject.Parse(connectionKey);
+            //JToken token = jsonObject["DefaultConnection"];
+            //string connString = token.ToString();
+            //curiosityRepo.connectionString = connString;
 
             CreateHostBuilder(args).Build().Run();         
 
@@ -47,8 +47,8 @@ namespace AA
             IDbConnection conn = new MySqlConnection(connString2);
                        
             //Space facts from SQL DB space_facts schema
-            var fRepo = new Facts_Generator.factsRepo(conn);
-            var facts = fRepo.GetFacts();
+            var fRepo = new Facts_Generator.FactsRepo(conn);
+            var facts = fRepo.GetAllFacts();
 
             Console.WriteLine("Hey Armchair Astronauts! Check out these fun facts about space:");
 
