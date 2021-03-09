@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using Dapper;
 using System.Threading.Tasks;
+using AA.Models;
 
 namespace AA.Facts_Generator
 {
@@ -16,26 +17,27 @@ namespace AA.Facts_Generator
             _connection = connection;
         }
 
-        public IEnumerable<facts> GetAllCategories()
+        public IEnumerable<Fact> GetAllCategories()
         {
-            return _connection.Query<facts>("SELECT DISTINCT category FROM facts_list;").ToList();
+            return _connection.Query<Fact>("SELECT DISTINCT category FROM facts_list;").ToList();
         }
 
-        public IEnumerable<facts> GetAllFacts()
+        public IEnumerable<Fact> GetAllFacts()
         {
-            return _connection.Query<facts>("SELECT * FROM facts_list;").ToList();
+            return _connection.Query<Fact>("SELECT * FROM facts_list;").ToList();
         }
 
-        public facts GetOneCategory(string category)
+        public Fact GetOneCategory(string category)
         {
-            return _connection.QuerySingle<facts>("SELECT * FROM facts_list WHERE CATEGORY = @category",
+            return _connection.QuerySingle<Fact>("SELECT * FROM facts_list WHERE CATEGORY = @category",
                 new { category = category });
         }
 
-        public facts GetRandomFact()
+        public Fact GetRandomFact()
         {
-            return _connection.QuerySingle<facts>("SELECT fact FROM facts_list ORDER BY RAND() LIMIT 1");
+            return _connection.QuerySingle<Fact>("SELECT fact FROM facts_list ORDER BY RAND() LIMIT 1;");
         }
 
+       
     }
 }

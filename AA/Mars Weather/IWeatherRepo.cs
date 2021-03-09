@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AA.Curiosity_Data
+namespace AA.Mars_Weather
 {
-    public interface ICuriosityRepo
+    public interface IWeatherRepo
     {
-        public IEnumerable<MarsData> GetMarsData();
+        public IEnumerable<Weather> GetAllWeather();
         
     }
 }

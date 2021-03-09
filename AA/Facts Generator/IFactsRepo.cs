@@ -8,10 +8,10 @@ namespace AA.Facts_Generator
 {
     public interface IFactsRepo
     {
-        public IEnumerable<facts> GetAllFacts();
-        public facts GetRandomFact();
-        public IEnumerable<facts> GetAllCategories();
-        public facts GetOneCategory(string category);
+        public IEnumerable<Fact> GetAllFacts();
+        public Fact GetRandomFact();
+        public IEnumerable<Fact> GetAllCategories();
+        public Fact GetOneCategory(string category);
        
     }
 }

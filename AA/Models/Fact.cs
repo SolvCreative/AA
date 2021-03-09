@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace AA.Models
 {
-    public class SpaceFacts
+    public class Fact
     {    
-        public SpaceFacts()
+        public Fact()
         {
         }
 

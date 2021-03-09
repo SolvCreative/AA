@@ -10,9 +10,9 @@ namespace AA.Controllers
     public class MarsController : Controller
     {
         
-        private readonly ICuriosityRepo repo;
+        private readonly IWeatherRepo repo;
 
-        public MarsController(ICuriosityRepo repo)
+        public MarsController(IWeatherRepo repo)
         {
             this.repo = repo;
         }
