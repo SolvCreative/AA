@@ -8,7 +8,7 @@ namespace AA.Mars_Weather
 {
     public interface IWeatherRepo
     {
-        public IEnumerable<Weather> GetAllWeather();
+        public IEnumerable<Weather> GetWeather();
         
     }
 }

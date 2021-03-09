@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AA.Mars_Weather
+namespace AA.Models
 {
     public class Weather 
     {

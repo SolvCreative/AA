@@ -7,6 +7,10 @@ namespace AA.Models
 {
     public class Neo
     {
+        public void GetNeo()
+        {
+
+        }
        
         public int id { get; set; }
         public string name { get; set; }

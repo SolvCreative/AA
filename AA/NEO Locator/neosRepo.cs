@@ -27,14 +27,5 @@ namespace AA.NEO_Locator
             return _connection.QuerySingle<Neo>("SELECT name, diameter, first_obs FROM neo_db ORDER BY RAND() LIMIT 1;");
         }
 
-        IEnumerable<Neo> INeoRepo.GetAllNeos()
-        {
-            throw new NotImplementedException();
-        }
-
-        void INeoRepo.GetRandomNeo()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

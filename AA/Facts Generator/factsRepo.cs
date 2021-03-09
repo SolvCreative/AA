@@ -24,7 +24,7 @@ namespace AA.Facts_Generator
 
         public IEnumerable<Fact> GetAllFacts()
         {
-            return _connection.Query<Fact>("SELECT * FROM facts_list;").ToList();
+            return _connection.Query<Fact>("SELECT * FROM facts_list;");
         }
 
         public Fact GetOneCategory(string category)

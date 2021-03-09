@@ -14,9 +14,9 @@ namespace AA.Mars_Weather
         public static string connectionString;
 
 
-        public IEnumerable<Weather> GetAllWeather()
+        public IEnumerable<Weather> GetWeather()
         {
-            throw new NotImplementedException();
+            throw new Exception();
         }
     }
 }

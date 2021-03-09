@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
-using AA.Curiosity_Data;
+using AA.Mars_Weather;
 
 namespace AA
 {
@@ -60,17 +60,6 @@ namespace AA
             }
 
             Console.WriteLine("____________________________________");
-
-        
-
-            //MAAS2 REST API - data from Mars Rover Curiosity
-            var client = new HttpClient();
-            string apiURL = "https://api.maas2.apollorion.com";
-            var apiResult = client.GetStringAsync(apiURL).Result;
-            var latestSol = JObject.Parse(apiResult).GetValue("Latest").ToString();
-            var data = latestSol;
-
-            Console.WriteLine($"Here is the latest data from Mars Rover Curiosity: {data}");
  
 
         }

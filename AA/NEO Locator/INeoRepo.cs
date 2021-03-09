@@ -10,6 +10,6 @@ namespace AA.NEO_Locator
     {
         public IEnumerable<Neo> GetAllNeos();
 
-        public void GetRandomNeo();
+        public Neo GetRandomNeo();
     }
 }

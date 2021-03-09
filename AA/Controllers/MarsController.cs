@@ -1,4 +1,4 @@
-﻿using AA.Curiosity_Data;
+﻿using AA.Mars_Weather;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace AA.Controllers
             this.repo = repo;
         }
 
-        public ViewResult MarsData()
+        public IActionResult ViewWeather(float SOL)
         {
-            var data = repo.GetMarsData();
+            var data = repo.GetWeather();
 
             return View(data);
         }

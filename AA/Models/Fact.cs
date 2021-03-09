@@ -10,7 +10,6 @@ namespace AA.Models
         public Fact()
         {
         }
-
         public int id { get; set; }
         public string category { get; set; }
         public string fact { get; set; }

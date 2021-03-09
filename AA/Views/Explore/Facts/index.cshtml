@@ -1,17 +1,23 @@
-﻿@using AA.Models;
+﻿@model Fact
 
-@model IEnumerable<SpaceFacts>
+<h3>@Model.fact Information</h3>
 
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>category</th>
+        <th>fact</th>
+        <th>source</th>
+    </tr>
 
-
-<h1>Space Facts</h1>
-@{
-    foreach (var fact in Model)
+    @foreach (var item in Model.fact)
     {
-        <h4>Fact: @fact.fact</h4>
-        <h2>Source: @fact.source</h2>
-        <h2>Category: @fact.category</h2>
+        <tr>
+            <td>@Model.id</td>
+            <td>@Model.category</td>
+            <td>@Model.fact</td>
+            <td>@Model.source</td>
+        </tr>
     }
-}
 
-
+</table>

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace AA.Controllers
 {
     public class ExploreController : Controller
@@ -18,9 +19,9 @@ namespace AA.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult ExploreIndex()
         {
-            return View();
+            return View("Explore/Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
