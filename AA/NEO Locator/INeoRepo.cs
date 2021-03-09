@@ -8,8 +8,10 @@ namespace AA.NEO_Locator
 {
     public interface INeoRepo
     {
-        public IEnumerable<Neo> GetAllNeos();
+        public IEnumerable<NeoViewModel> GetAllNeos();
 
-        public Neo GetRandomNeo();
+        public NeoViewModel GetRandomNeo();
+
+        public IEnumerable<NeoViewModel> SearchNeo(string search);
     }
 }

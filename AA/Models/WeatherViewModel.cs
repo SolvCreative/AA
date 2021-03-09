@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AA.Models
 {
-    public class Weather 
+    public class WeatherViewModel 
     {
         public void GetWeather()
         {

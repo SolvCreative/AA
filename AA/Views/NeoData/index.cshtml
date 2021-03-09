@@ -1,4 +1,13 @@
-﻿<!DOCTYPE HTML>
+﻿@model NeoViewModel
+@using (Html.BeginForm("SearchNeo", "Neo", FormMethod.Get))
+{
+    <p>Find by name: @Html.TextArea("search")
+    <input type="submit" value="Search" />
+    </p>
+}
+
+
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <title>Explore</title>
@@ -14,7 +23,7 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="index.cshtml" class="logo">Home</a>
+            <a href=/home/index class="logo">Home</a>
         </header>
 
         <!-- Nav -->
@@ -22,7 +31,6 @@
             <ul class="links">
                 <li><a href="index.cshtml">Home</a></li>
                 <li class="active"><a href="explore.cshtml">Explore</a></li>
-                <li><a href="test.cshtml">Test</a></li>
                 <li><a href="phenomena.cshtml">Phenomena</a></li>
                 <li><a href="missioncontrol.cshtml">Mission Control</a></li>
             </ul>
@@ -34,18 +42,17 @@
             <!-- Post -->
             <section class="post">
                 <header class="major">
-                    <h1>Weather from Mars<br /></h1>
+                    <h1>Near-Earth Objects<br />
+                    (NEO)</h1>
                     <p>
-                        Check out the latest weather from NASA's Insight, which takes continuous weather<br />
-                        measurements on the surface of Mars at Elysium Planitia, a flat. smooth plain near<br />
-                        Mars' equator.
+                        .................Insert text here about the Near Earth Objects...............
                     </p>
                 </header>
                 <div class="image main">
-                    <img src="~/assets/elysium_planitia.jpg" alt="insight on mars' surface at elysium planitia" />
+                    <img src="~/assets/nasa_neo_image.jpg" alt="asteroid in space" />
                     <span class="date"><em>Photo credit: NASA</em></span>
                 </div>
-                @model Weather
+               
 
                 </section>
         </div>

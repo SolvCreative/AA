@@ -1,0 +1,11 @@
+﻿@model IEnumerable<NeoViewModel>
+
+
+
+@using (Html.BeginForm("SearchNEO", "NeoViewModel", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextArea("search")
+        <input type="submit" value="Search" />
+    </p>
+}

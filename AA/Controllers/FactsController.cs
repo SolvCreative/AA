@@ -1,4 +1,5 @@
 ﻿using AA.Facts_Generator;
+using AA.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,14 +17,7 @@ namespace AA.Controllers
             this.repo = repo;
         }
 
-        public IActionResult ViewAllFacts()
-        {
-            var facts = repo.GetAllFacts();
-
-            return View(facts);
-        }
-
-        public IActionResult GenerateFact()
+        public IActionResult Index()
         {
             var randomFact = repo.GetRandomFact();
 

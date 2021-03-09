@@ -17,14 +17,21 @@ namespace AA.NEO_Locator
         }
 
 
-        public IEnumerable<Neo> GetAllNeos()
+        public IEnumerable<NeoViewModel> GetAllNeos()
         {
-            return _connection.Query<Neo>("SELECT * FROM neo_db;").ToList();
+            return _connection.Query<NeoViewModel>("SELECT * FROM neo_db;").ToList();
         }
 
-        public Neo GetRandomNeo()
+        public NeoViewModel GetRandomNeo()
         {
-            return _connection.QuerySingle<Neo>("SELECT name, diameter, first_obs FROM neo_db ORDER BY RAND() LIMIT 1;");
+            return _connection.QuerySingle<NeoViewModel>("SELECT name, diameter, first_obs FROM neo_db ORDER BY RAND() LIMIT 1;");
+        }
+
+        public IEnumerable<NeoViewModel> SearchNeo(string search)
+        {                
+            //prevents sql injection
+            return _connection.Query<NeoViewModel>("SELECT * FROM neo_db WHERE LIKE @name;",
+                new { name = "%" + search + "%" });
         }
 
     }

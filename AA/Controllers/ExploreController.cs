@@ -19,9 +19,9 @@ namespace AA.Controllers
             _logger = logger;
         }
 
-        public IActionResult ExploreIndex()
+        public IActionResult Index()
         {
-            return View("Explore/Index");
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -17,25 +17,25 @@ namespace AA.Facts_Generator
             _connection = connection;
         }
 
-        public IEnumerable<Fact> GetAllCategories()
+        public IEnumerable<FactViewModel> GetAllCategories()
         {
-            return _connection.Query<Fact>("SELECT DISTINCT category FROM facts_list;").ToList();
+            return _connection.Query<FactViewModel>("SELECT DISTINCT category FROM facts_list;").ToList();
         }
 
-        public IEnumerable<Fact> GetAllFacts()
+        public IEnumerable<FactViewModel> GetAllFacts()
         {
-            return _connection.Query<Fact>("SELECT * FROM facts_list;");
+            return _connection.Query<FactViewModel>("SELECT * FROM facts_list;");
         }
 
-        public Fact GetOneCategory(string category)
+        public FactViewModel GetOneCategory(string category)
         {
-            return _connection.QuerySingle<Fact>("SELECT * FROM facts_list WHERE CATEGORY = @category",
+            return _connection.QuerySingle<FactViewModel>("SELECT * FROM facts_list WHERE CATEGORY = @category",
                 new { category = category });
         }
 
-        public Fact GetRandomFact()
+        public FactViewModel GetRandomFact()
         {
-            return _connection.QuerySingle<Fact>("SELECT fact FROM facts_list ORDER BY RAND() LIMIT 1;");
+            return _connection.QuerySingle<FactViewModel>("SELECT fact FROM facts_list ORDER BY RAND() LIMIT 1;");
         }
 
        

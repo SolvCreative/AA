@@ -20,7 +20,7 @@
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
-                <li><a href=/home/index>Home</a></li>
+                <li><a href="index.cshtml">Home</a></li>
                 <li class="active"><a href=/explore/index>Explore</a></li>
                 <li><a href=/phenomena/index>Phenomena</a></li>
                 <li><a href=/missioncontrol/index>Mission Control</a></li>
@@ -33,24 +33,22 @@
             <!-- Post -->
             <section class="post">
                 <header class="major">
-                    <h1>Let's Explore<br /></h1>
+                    <h1>Weather from Mars<br /></h1>
                     <p>
-                        "Look up at the stars and not down at your feet. Try to make sense of what you<br />
-                        see, and wonder about what makes the universe exist. Be curious."<br />
-                        - Stephen Hawking
+                        Check out the latest weather from NASA's Insight, which takes continuous weather<br />
+                        measurements on the surface of Mars at Elysium Planitia, a flat. smooth plain near<br />
+                        Mars' equator.
                     </p>
                 </header>
-                <ul class="actions special">
-                    <li><a href="/Facts/index" class="button large">Space Facts</a></li>
-                    <li><a href=/neodata/index class="button large">NEO Locator</a></li> 
-                    <li><a href=/marsdata/index class="button large">Mars Data</a></li>
-                </ul>
                 <div class="image main">
-                    <img src="~/assets/hubble.png" alt="hubble image of M81 spiral galaxy" />
+                    <img src="~/assets/elysium_planitia.jpg" alt="insight on mars' surface at elysium planitia" />
                     <span class="date"><em>Photo credit: NASA</em></span>
                 </div>
-            </section>
+                @model WeatherViewModel
+
+                </section>
         </div>
+
         <!-- Copyright -->
         <div id="copyright">
             <ul><li>&copy; 2021 SolvCreative LLC</li></ul>

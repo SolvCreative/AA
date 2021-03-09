@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 
 namespace AA.Models
 {
-    public class Neo
+    public class NeoViewModel
     {
         public void GetNeo()
         {
 
-        }
-       
+        }       
         public int id { get; set; }
         public string name { get; set; }
         public float diameter { get; set; } //what is the unit of measure? Check the JPL site.
