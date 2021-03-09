@@ -1,77 +1,64 @@
 ﻿@model NeoViewModel
-@using (Html.BeginForm("SearchNeo", "Neo", FormMethod.Get))
-{
-    <p>Find by name: @Html.TextArea("search")
-    <input type="submit" value="Search" />
-    </p>
-}
-
 
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Explore</title>
+    <title>Space Facts</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="~/css/main.css" />
     <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
 </head>
+
 <body class="is-preload">
 
     <!-- Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" class="fade-in">
 
-        <!-- Header -->
-        <header id="header">
-            <a href=/home/index class="logo">Home</a>
-        </header>
+        <!-- Intro -->
+        <div id="intro">
+            <h1>NEO = Near Earth Objects</h1>
+            <p>
+                Below is a truncated list of some of the near-earth objects from NASA's database at JPL.
+            </p>
+            <div class="image main">
+                <img src="~/assets/nasa_neo_image.jpg" alt="asteroid in space" />
+                <span class="date"><em>Photo credit: NASA</em></span>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Diameter</th>
+                    <th>First Observed</th>
+                    <th>Last Observed</th>
+                </tr>
+                <tr>
+                    <td>@Model.id</td>
+                    <td>@Model.name</td>
+                    <td>@Model.diameter</td>
+                    <td>@Model.first_obs</td>
+                    <td>@Model.last_obs</td>
+                </tr>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.cshtml">Home</a></li>
-                <li class="active"><a href="explore.cshtml">Explore</a></li>
-                <li><a href="phenomena.cshtml">Phenomena</a></li>
-                <li><a href="missioncontrol.cshtml">Mission Control</a></li>
-            </ul>
-        </nav>
+            </table>
 
-        <!-- Main -->
-        <div id="main">
 
-            <!-- Post -->
-            <section class="post">
-                <header class="major">
-                    <h1>Near-Earth Objects<br />
-                    (NEO)</h1>
-                    <p>
-                        .................Insert text here about the Near Earth Objects...............
-                    </p>
-                </header>
-                <div class="image main">
-                    <img src="~/assets/nasa_neo_image.jpg" alt="asteroid in space" />
-                    <span class="date"><em>Photo credit: NASA</em></span>
-                </div>
-               
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; 2021 SolvCreative LLC</li></ul>
+            </div>
 
-                </section>
         </div>
 
-        <!-- Copyright -->
-        <div id="copyright">
-            <ul><li>&copy; 2021 SolvCreative LLC</li></ul>
-        </div>
-
-    </div>
-
-    <!-- Scripts -->
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/jquery.scrollex.min.js"></script>
-    <script src="~/js/jquery.scrolly.min.js"></script>
-    <script src="~/js/browser.min.js"></script>
-    <script src="~/js/breakpoints.min.js"></script>
-    <script src="~/js/util.js"></script>
-    <script src="~/js/main.js"></script>
+        <!-- Scripts -->
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/jquery.scrollex.min.js"></script>
+        <script src="~/js/jquery.scrolly.min.js"></script>
+        <script src="~/js/browser.min.js"></script>
+        <script src="~/js/breakpoints.min.js"></script>
+        <script src="~/js/util.js"></script>
+        <script src="~/js/main.js"></script>
 
 </body>
 </html>

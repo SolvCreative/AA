@@ -2056,6 +2056,20 @@ input, select, textarea {
 
 /* Button */
 
+/* home page button */
+	.btn {
+		height: 80px;
+		line-height: 80px;
+		width: 80px;
+		font-size: 2em;
+		font-weight: bold;
+		border-radius: 50%;
+		background-color: white;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
