@@ -1,5 +1,5 @@
-﻿@model NeoViewModel
-
+﻿
+<h1> testing one two three four</h1>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -25,13 +25,17 @@
                 <img src="~/assets/nasa_neo_image.jpg" alt="asteroid in space" />
                 <span class="date"><em>Photo credit: NASA</em></span>
             </div>
+            @model NeoViewModel
+
+            <h3>@Model Information</h3>
+
             <table class="table">
                 <tr>
                     <th>id</th>
-                    <th>Name</th>
-                    <th>Diameter</th>
-                    <th>First Observed</th>
-                    <th>Last Observed</th>
+                    <th>name</th>
+                    <th>diameter</th>
+                    <th>first_obs</th>
+                    <th>last_obs</th>
                 </tr>
                 <tr>
                     <td>@Model.id</td>

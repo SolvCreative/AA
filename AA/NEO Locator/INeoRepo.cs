@@ -13,5 +13,7 @@ namespace AA.NEO_Locator
         public NeoViewModel GetRandomNeo();
 
         public IEnumerable<NeoViewModel> SearchNeo(string search);
+
+        public IEnumerable<NeoViewModel> GetHundredNeos();
     }
 }

@@ -22,7 +22,19 @@ namespace AA.Controllers
         {
             return View();
         }
+        public IActionResult Explore()
+        {
+            return View();
+        }
+        public IActionResult Mission_Control()
+        {
+            return View();
+        }
 
+        public IActionResult Phenomena()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

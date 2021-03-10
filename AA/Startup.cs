@@ -1,4 +1,5 @@
 using AA.Facts_Generator;
+using AA.NEO_Locator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,14 +29,24 @@ namespace AA
         {
             services.AddScoped<IDbConnection>((s) =>
             {
-                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("space_facts"));
-                conn.Open();
-                return conn;
+                IDbConnection conn1 = new MySqlConnection(Configuration.GetConnectionString("space_facts"));
+                conn1.Open();
+                return conn1;
             });
 
             services.AddTransient<IFactsRepo, FactsRepo>();
-
             services.AddControllersWithViews();
+
+            
+            //services.AddScoped<IDbConnection>((s) =>
+            //{
+            //    IDbConnection conn2 = new MySqlConnection(Configuration.GetConnectionString("neodb"));
+            //    conn2.Open();
+            //    return conn2;
+            //});
+
+            //services.AddTransient<INeoRepo, NeoRepo>();
+            //services.AddControllersWithViews();
 
         }
 

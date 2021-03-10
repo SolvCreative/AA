@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Views\Phenomena\Controversies\index.cshtml" />
+    <None Include="Views\z_archive\controversies.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

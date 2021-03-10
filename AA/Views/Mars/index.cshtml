@@ -21,7 +21,7 @@
         <nav id="nav">
             <ul class="links">
                 <li><a href="index.cshtml">Home</a></li>
-                <li class="active"><a href=/explore/index>Explore</a></li>
+                <li class="active"><a href=/explore>Explore</a></li>
                 <li><a href=/phenomena/index>Phenomena</a></li>
                 <li><a href=/missioncontrol/index>Mission Control</a></li>
             </ul>
@@ -46,7 +46,33 @@
                 </div>
                 @model WeatherViewModel
 
-                </section>
+                <h3>@Model.SOL Information</h3>
+
+                <table class="table">
+                    <tr>
+                        <th>SOL</th>
+                        <th>AT</th>
+                        <th>HWS</th>
+                        <th>PRE</th>
+                        <th>WD</th>
+                        <th>Season</th>
+                        <th>First_UTC</th>
+                        <th>Last_UTC</th>
+                    </tr>
+                    <tr>
+                        <td>@Model.SOL</td>
+                        <td>@Model.AT</td>
+                        <td>@Model.HWS</td>
+                        <td>@Model.PRE</td>
+                        <td>@Model.WD</td>
+                        <td>@Model.Season</td>
+                        <td>@Model.First_UTC</td>
+                        <td>@Model.Last_UTC</td>
+                    </tr>
+
+                </table>
+
+            </section>
         </div>
 
         <!-- Copyright -->

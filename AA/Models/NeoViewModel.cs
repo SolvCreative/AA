@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AA.Models
 {
     public class NeoViewModel
     {
-        public void GetNeo()
+        public void GetNeoData()
         {
+        }
 
-        }       
         public int id { get; set; }
         public string name { get; set; }
         public float diameter { get; set; } //what is the unit of measure? Check the JPL site.
