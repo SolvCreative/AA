@@ -37,7 +37,7 @@ namespace AA
             services.AddTransient<IFactsRepo, FactsRepo>();
             services.AddControllersWithViews();
 
-            
+
             //services.AddScoped<IDbConnection>((s) =>
             //{
             //    IDbConnection conn2 = new MySqlConnection(Configuration.GetConnectionString("neodb"));
@@ -47,8 +47,23 @@ namespace AA
 
             //services.AddTransient<INeoRepo, NeoRepo>();
             //services.AddControllersWithViews();
+            
+            services.AddHttpClient("client", c =>
+            {
+                c.BaseAddress = new Uri("https://api.le-systeme-solaire.net/rest/bodies");
+                
+            });
 
         }
+
+
+        public string id { get; set; }
+        public string englishName { get; set; }
+        public bool isPlanet { get; set; }
+        public Array moons { get; set; }
+        public double gravity { get; set; }
+        public int meanRadius { get; set; }
+        public string discoveryDate { get; set; }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

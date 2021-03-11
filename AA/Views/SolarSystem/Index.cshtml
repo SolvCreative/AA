@@ -1,0 +1,55 @@
+﻿@model SolarSystemViewModel
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Solar System Data </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Solar System Data:</h1>
+        </div>
+            <!-- Table-->
+        @*<div>
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Is it a Planet?</th>
+                    <th>Moons</th>
+                    <th>Gravity</th>
+                    <th>Mean Radius (km)</th>
+                    <th>Discovery Date</th>
+                </tr>
+                <tr>
+                    <td>@Model.id</td>
+                    <td>@Model.englishName</td>
+                    <td>@Model.isPlanet</td>
+                    <td>@Model.moons </td>
+                    <td>@Model.gravity</td>
+                    <td>@Model.meanRadius</td>
+                    <td>@Model.discoveryDate</td>
+                </tr>
+            </table>
+        </div>*@
+
+        <!-- Scripts -->
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/jquery.scrollex.min.js"></script>
+        <script src="~/js/jquery.scrolly.min.js"></script>
+        <script src="~/js/browser.min.js"></script>
+        <script src="~/js/breakpoints.min.js"></script>
+        <script src="~/js/util.js"></script>
+        <script src="~/js/main.js"></script>
+</body>
+</html>

@@ -1,18 +1,18 @@
+using AA.Models;
+using AA.Solar_System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using System.Net.Http;
-using Newtonsoft.Json.Linq;
-using AA.Mars_Weather;
+using System.Threading.Tasks;
 
 namespace AA
 {
@@ -50,20 +50,19 @@ namespace AA
             var fRepo = new Facts_Generator.FactsRepo(conn);
             var facts = fRepo.GetAllFacts();
 
-            Console.WriteLine("Hey Armchair Astronauts! Check out these fun facts about space:");
+            // Solar system API
 
-            foreach (var f in facts)
-            {
-                Console.WriteLine($"Category: {f.category}\n" +
-                    $"Fun Fact: {f.fact}");
-                Console.WriteLine(".................");
-            }
-
-            Console.WriteLine("____________________________________");
- 
-
+            var client = new HttpClient();
+            
+            var url = "https://api.le-systeme-solaire.net/rest/bodies/";
+            var response = client.GetStringAsync(url).Result;
+            var bodies = JsonConvert.DeserializeObject<SolarSystemViewModel>(response);
+           
+            
         }
+
+    }
         }
            
-}
+
 
