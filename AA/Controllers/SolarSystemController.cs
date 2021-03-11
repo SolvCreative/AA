@@ -13,13 +13,18 @@ namespace AA.Controllers
 {
     public class SolarSystemController : Controller
     {
+        private readonly ISolarSystemRepo repo;
+
+        public SolarSystemController(ISolarSystemRepo repo)
+        {
+            this.repo = repo;
+        }
 
         public IActionResult Index()
         {
-           
-            return View();
+            var data = repo.GetData();
+            return View(data);
         }
-
 
     }
 

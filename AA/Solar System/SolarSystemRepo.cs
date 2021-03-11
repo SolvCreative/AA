@@ -14,18 +14,18 @@ namespace AA.Solar_System
     public class SolarSystemRepo : ISolarSystemRepo
     {
                 
-        private HttpClient _client;
+        private readonly HttpClient _client;
         
-        public SolarSystemRepo(HttpClient client)
+        public SolarSystemRepo()
         {
-            _client = client;
+            
         }
 
         public IEnumerable<SolarSystemViewModel> GetData()
         {
-            var client = new HttpClient();
+          
             var url = "https://api.le-systeme-solaire.net/rest/bodies/";
-            var response = client.GetStringAsync(url).Result;
+            var response = _client.GetStringAsync(url).Result;
             var data = JsonConvert.DeserializeObject<SolarSystemList>(response);
             return (IEnumerable<SolarSystemViewModel>)data;
         }

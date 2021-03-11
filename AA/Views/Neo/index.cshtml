@@ -1,5 +1,4 @@
-﻿
-<h1> testing one two three four</h1>
+﻿@model IEnumerable<NeoViewModel>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -19,40 +18,37 @@
         <div id="intro">
             <h1>NEO = Near Earth Objects</h1>
             <p>
-                Below is a truncated list of some of the near-earth objects from NASA's database at JPL.
+                Below is a short list of some of the many near earth objects observed from NASA's JPL.
             </p>
-            <div class="image main">
-                <img src="~/assets/nasa_neo_image.jpg" alt="asteroid in space" />
-                <span class="date"><em>Photo credit: NASA</em></span>
-            </div>
-            @model NeoViewModel
-
-            <h3>@Model Information</h3>
-
+            <br /><br />
             <table class="table">
-                <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>diameter</th>
-                    <th>first_obs</th>
-                    <th>last_obs</th>
-                </tr>
-                <tr>
-                    <td>@Model.id</td>
-                    <td>@Model.name</td>
-                    <td>@Model.diameter</td>
-                    <td>@Model.first_obs</td>
-                    <td>@Model.last_obs</td>
-                </tr>
-
+                <thead>
+                <tr style="background-color: #00ffff">
+                    <th style="text-align: center">Name</th>
+                    <th style="text-align: center">Diameter (km)</th>
+                    <th style="text-align: center">First Observed</th>
+                    <th style="text-align: center">Last Observed</th>
+                </tr></thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr style="background-color: #000000">
+                        <td>@item.name</td>
+                        <td>@item.diameter</td>
+                        <td>@item.first_obs</td>
+                        <td>@item.last_obs</td>
+                    </tr>
+                }
+                </tbody>
             </table>
-
-
+            <div>
+                <p><em>Find more information about these and hundreds of thousands of other NEOs at the<br /> 
+                    <a href="https://cneos.jpl.nasa.gov" target="_blank">Center for Near Earth Object Studies</a>. </em></p>
+            </div>
             <!-- Copyright -->
             <div id="copyright">
                 <ul><li>&copy; 2021 SolvCreative LLC</li></ul>
             </div>
-
         </div>
 
         <!-- Scripts -->

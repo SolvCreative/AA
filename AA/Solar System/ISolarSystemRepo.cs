@@ -9,5 +9,6 @@ namespace AA.Controllers.Solar_System
     public interface ISolarSystemRepo
     {
         public IEnumerable<SolarSystemViewModel> GetData();
+
     }
 }

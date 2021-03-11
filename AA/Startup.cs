@@ -1,5 +1,7 @@
+using AA.Controllers.Solar_System;
 using AA.Facts_Generator;
 using AA.NEO_Locator;
+using AA.Solar_System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -45,25 +47,15 @@ namespace AA
             //    return conn2;
             //});
 
-            //services.AddTransient<INeoRepo, NeoRepo>();
-            //services.AddControllersWithViews();
-            
-            services.AddHttpClient("client", c =>
-            {
-                c.BaseAddress = new Uri("https://api.le-systeme-solaire.net/rest/bodies");
-                
-            });
+            services.AddTransient<INeoRepo, NeoRepo>();
+            services.AddControllersWithViews();
+
+            //services.AddTransient<ISolarSystemRepo, SolarSystemRepo>();
+            services.AddControllersWithViews();
+
 
         }
 
-
-        public string id { get; set; }
-        public string englishName { get; set; }
-        public bool isPlanet { get; set; }
-        public Array moons { get; set; }
-        public double gravity { get; set; }
-        public int meanRadius { get; set; }
-        public string discoveryDate { get; set; }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

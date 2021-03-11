@@ -11,7 +11,10 @@ namespace AA.Models
 {
     public class SolarSystemViewModel
     {
-       
+        public void GetData()
+        {
+        }
+
         public IEnumerable<SolarSystemList> SolarSystemList { get; set; }
         public string? id { get; set; }
         public string? englishName { get; set; }
