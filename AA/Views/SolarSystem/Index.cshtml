@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SolarSystemViewModel>
+﻿@model SolarSystemViewModel
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -17,32 +17,34 @@
 
         <!-- Intro -->
         <div id="intro">
-            <h1>Solar System Data:</h1>
+            <h1>Solar System Data</h1>
+            <p><em>Source: Le Système solaire à portée de votre souris </em></p>
         </div>
             <!-- Table-->
         <div>
             <table class="table">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Is it a Planet?</th>
-                    <th>Moons</th>
-                    <th>Gravity</th>
-                    <th>Mean Radius (km)</th>
-                    <th>Discovery Date</th>
-                </tr>
-                @foreach (var item in Model)
-                {
-                    <td>@item.id</td>
-                    <td>@item.englishName</td>
-                    <td>@item.isPlanet</td>
-                    <td>@item.moons </td>
-                    <td>@item.gravity</td>
-                    <td>@item.meanRadius</td>
-                    <td>@item.discoveryDate</td>
-                }
-                <tr>
-                </tr>
+                <thead>
+                    <tr style="background-color: #00ffff">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Is it a Planet?</th>
+                        <th>Moons</th>
+                        <th>Gravity</th>
+                        <th>Mean Radius (km)</th>
+                        <th>Discovery Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @*<tr style="background-color: #000000">
+                        <td>@Model.id</td>
+                        <td>@Model.englishName</td>
+                        <td>@Model.isPlanet</td>
+                        <td>@Model.moons </td>
+                        <td>@Model.gravity</td>
+                        <td>@Model.meanRadius</td>
+                        <td>@Model.discoveryDate</td>
+                        </tr>*@
+                </tbody>
             </table>
         </div>
 

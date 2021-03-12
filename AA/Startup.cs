@@ -39,18 +39,10 @@ namespace AA
             services.AddTransient<IFactsRepo, FactsRepo>();
             services.AddControllersWithViews();
 
-
-            //services.AddScoped<IDbConnection>((s) =>
-            //{
-            //    IDbConnection conn2 = new MySqlConnection(Configuration.GetConnectionString("neodb"));
-            //    conn2.Open();
-            //    return conn2;
-            //});
-
             services.AddTransient<INeoRepo, NeoRepo>();
             services.AddControllersWithViews();
 
-            //services.AddTransient<ISolarSystemRepo, SolarSystemRepo>();
+            services.AddTransient<ISolarSystemRepo, SolarSystemRepo>();
             services.AddControllersWithViews();
 
 

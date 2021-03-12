@@ -24,10 +24,12 @@ namespace AA.Solar_System
         public IEnumerable<SolarSystemViewModel> GetData()
         {
           
-            var url = "https://api.le-systeme-solaire.net/rest/bodies/";
-            var response = _client.GetStringAsync(url).Result;
-            var data = JsonConvert.DeserializeObject<SolarSystemList>(response);
-            return (IEnumerable<SolarSystemViewModel>)data;
+            throw new Exception();
+
+            //var url = "https://api.le-systeme-solaire.net/rest/bodies/";
+            //var response = _client.GetStringAsync(url).Result;
+            //var data = JsonConvert.DeserializeObject<SolarSystemList>(response);
+            //return (IEnumerable<SolarSystemViewModel>)data;
         }
     }
 }

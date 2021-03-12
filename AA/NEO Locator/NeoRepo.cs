@@ -30,7 +30,7 @@ namespace AA.NEO_Locator
 
         public IEnumerable<NeoViewModel> GetHundredNeos()
         {
-            return _conn.Query<NeoViewModel>("SELECT name, diameter, first_obs FROM neo_db ORDER BY RAND() LIMIT 100;");
+            return _conn.Query<NeoViewModel>("SELECT full_name, name, diameter, first_obs FROM neo_db ORDER BY RAND() LIMIT 100;");
         }
 
         public NeoViewModel GetRandomNeo()

@@ -23,20 +23,20 @@
             <br /><br />
             <table class="table">
                 <thead>
-                <tr style="background-color: #00ffff">
-                    <th style="text-align: center">Name</th>
-                    <th style="text-align: center">Diameter (km)</th>
-                    <th style="text-align: center">First Observed</th>
-                    <th style="text-align: center">Last Observed</th>
-                </tr></thead>
+                    <tr style="background-color: #00ffff">
+                        <th style="text-align: center">Official Name</th>
+                        <th style="text-align: center">Short Name</th>
+                        <th style="text-align: center">Diameter (km)</th>
+                        <th style="text-align: center">First Observed</th>
+                    </tr></thead>
                 <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr style="background-color: #000000">
+                    <tr style="background-color: #8d8a8a">
+                        <td>@item.full_name</td>
                         <td>@item.name</td>
                         <td>@item.diameter</td>
                         <td>@item.first_obs</td>
-                        <td>@item.last_obs</td>
                     </tr>
                 }
                 </tbody>

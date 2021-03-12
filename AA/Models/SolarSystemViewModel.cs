@@ -16,13 +16,27 @@ namespace AA.Models
         }
 
         public IEnumerable<SolarSystemList> SolarSystemList { get; set; }
-        public string? id { get; set; }
-        public string? englishName { get; set; }
-        public bool? isPlanet { get; set; }
-        public Array? moons { get; set; }
-        public double? gravity { get; set; }
-        public int? meanRadius { get; set; }
-        public string? discoveryDate { get; set; }
+
+        [JsonProperty("id")]
+        public string id { get; set; }
+        
+        [JsonProperty("englishName")]
+        public string englishName { get; set; }
+
+        [JsonProperty("isPlanet")]
+        public bool isPlanet { get; set; }
+
+        [JsonProperty("moons")]
+        public Array moons { get; set; }
+
+        [JsonProperty("gravity")]
+        public double gravity { get; set; }
+
+        [JsonProperty("meanRadius")]
+        public int meanRadius { get; set; }
+
+        [JsonProperty("discoveryDate")]
+        public string discoveryDate { get; set; }
     }
               
     }

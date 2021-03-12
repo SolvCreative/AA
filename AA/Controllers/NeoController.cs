@@ -23,11 +23,10 @@ namespace AA.Controllers
 
             return View(neoData);
         }
-
-        //public IActionResult SearchNeo(string search)
-        //{
-        //    var searchNeo = repo.SearchNeo(search);
-        //    return View("SearchNEO");
-        //}
+        public IActionResult SearchNeo(string search)
+        {
+            var searchNeo = repo.SearchNeo(search);
+            return View("SearchNEO");
+        }
     }
 }
