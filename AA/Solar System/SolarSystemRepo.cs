@@ -11,25 +11,23 @@ using Newtonsoft.Json.Linq;
 
 namespace AA.Solar_System
 {
-    public class SolarSystemRepo : ISolarSystemRepo
-    {
-                
-        private readonly HttpClient _client;
+    //public class SolarSystemRepo : ISolarSystemRepo
+    //{
         
-        public SolarSystemRepo()
-        {
+    //    public SolarSystemRepo()
+    //    {
             
-        }
+    //    }
 
-        public IEnumerable<SolarSystemViewModel> GetData()
-        {
+    //    public IEnumerable<SolarSystemViewModel> GetData()
+    //    {
           
-            throw new Exception();
+    //        throw new Exception();
 
-            //var url = "https://api.le-systeme-solaire.net/rest/bodies/";
-            //var response = _client.GetStringAsync(url).Result;
-            //var data = JsonConvert.DeserializeObject<SolarSystemList>(response);
-            //return (IEnumerable<SolarSystemViewModel>)data;
-        }
-    }
+    //        //var url = "https://api.le-systeme-solaire.net/rest/bodies/";
+    //        //var response = _client.GetStringAsync(url).Result;
+    //        //var data = JsonConvert.DeserializeObject<SolarSystemList>(response);
+    //        //return (IEnumerable<SolarSystemViewModel>)data;
+    //    }
+    //}
 }

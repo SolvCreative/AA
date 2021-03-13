@@ -52,11 +52,11 @@ namespace AA
 
             // Solar system API
 
-            var client = new HttpClient();
+            //var client = new HttpClient();
             
-            var url = "https://api.le-systeme-solaire.net/rest/bodies/";
-            var response = client.GetStringAsync(url).Result;
-            var bodies = JsonConvert.DeserializeObject<SolarSystemViewModel>(response);
+            //var url = "https://api.le-systeme-solaire.net/rest/bodies/";
+            //var response = client.GetStringAsync(url).Result;
+            //var bodies = JsonConvert.DeserializeObject<SolarSystemViewModel>(response);
            
             
         }

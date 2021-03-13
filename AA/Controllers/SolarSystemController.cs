@@ -17,42 +17,59 @@ namespace AA.Controllers
 {
     public class SolarSystemController : Controller
     {
-        private readonly ISolarSystemRepo repo;
 
-        public SolarSystemController(ISolarSystemRepo repo)
+        public IActionResult Index()
         {
-            this.repo = repo;
+            var data = new GetData();
+            var model = data.solarSystemData;
+            return View(model);
+            //var client = new HttpClient();
+            //var connection = "https://api.le-systeme-solaire.net/rest/bodies/";
+            //var response = client.GetStringAsync(connection).Result;
+            //var data = JsonConvert.DeserializeObject<SolarSystemViewModel>(response);
+
         }
 
-        public async Task<ActionResult> Index()
-        {
-            List<SolarSystemList> dataList = new List<SolarSystemList>();
 
-            using (var client = new HttpClient())
-            {
-                string url = "https://api.le-systeme-solaire.net/rest/bodies/";
-                client.BaseAddress = new Uri(url);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage Res = await client.GetAsync(url);
+        //private readonly ISolarSystemRepo repo;
 
-                if (Res.IsSuccessStatusCode)
-                {
-                    var responseContent = Res.Content;
-                    var responseString = Res.Content.ReadAsStringAsync().Result;
-                    var json = JObject.Parse(responseString);
-                }
-                return View();
-            }
-        }
-     
-  
+        //public SolarSystemController(ISolarSystemRepo repo)
+        //{
+        //    this.repo = repo;
+        //}
 
         //public IActionResult Index()
         //{
         //    var data = repo.GetData();
         //    return View(data);
         //}
+
+
+        //public async Task<ActionResult> Index()
+        //{
+        //    List<SolarSystemData> dataList = new List<SolarSystemData>();
+
+        //    using (var client = new HttpClient())
+        //    {
+        //        string url = "https://api.le-systeme-solaire.net/rest/bodies/";
+        //        client.BaseAddress = new Uri(url);
+        //        client.DefaultRequestHeaders.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //        HttpResponseMessage Res = await client.GetAsync(url);
+
+        //        if (Res.IsSuccessStatusCode)
+        //        {
+        //            var responseContent = Res.Content;
+        //            var responseString = Res.Content.ReadAsStringAsync().Result;
+        //            var json = JObject.Parse(responseString);
+        //        }
+        //        return View();
+        //    }
+        //}
+
+
+
+
 
     }
 

@@ -1,4 +1,4 @@
-﻿@model SolarSystemViewModel
+﻿@model AA.Solar_System.SolarSystemData
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -20,7 +20,7 @@
             <h1>Solar System Data</h1>
             <p><em>Source: Le Système solaire à portée de votre souris </em></p>
         </div>
-            <!-- Table-->
+        <!-- Table-->
         <div>
             <table class="table">
                 <thead>
@@ -35,15 +35,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @*<tr style="background-color: #000000">
-                        <td>@Model.id</td>
-                        <td>@Model.englishName</td>
-                        <td>@Model.isPlanet</td>
-                        <td>@Model.moons </td>
-                        <td>@Model.gravity</td>
-                        <td>@Model.meanRadius</td>
-                        <td>@Model.discoveryDate</td>
-                        </tr>*@
+                    @if (Model == null)
+                    {
+                        <span>null</span>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.Bodies)
+                        {
+                            <tr style="background-color: #000000">
+                                <td>@item.id?</td>
+                                <td>@item.englishName?</td>
+                                <td>@item.isPlanet?</td>
+                                @*<td>@item.moons </td>*@
+                                <td>@item.gravity?</td>
+                                <td>@item.meanRadius?</td>
+                                <td>@item.discoveryDate?</td>
+                            </tr>
+                        }
+                    }
+
+
                 </tbody>
             </table>
         </div>

@@ -42,8 +42,8 @@ namespace AA
             services.AddTransient<INeoRepo, NeoRepo>();
             services.AddControllersWithViews();
 
-            services.AddTransient<ISolarSystemRepo, SolarSystemRepo>();
-            services.AddControllersWithViews();
+            //services.AddTransient<ISolarSystemRepo, SolarSystemRepo>();
+            //services.AddControllersWithViews();
 
 
         }

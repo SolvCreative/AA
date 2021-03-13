@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AA.Controllers.Solar_System
 {
-    public interface ISolarSystemRepo
-    {
-        public IEnumerable<SolarSystemViewModel> GetData();
+//    public interface ISolarSystemRepo
+//    {
+//        //public IEnumerable<SolarSystemViewModel> GetData();
 
-    }
+//    }
 }
