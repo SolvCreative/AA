@@ -1,17 +1,18 @@
-﻿using AA.Controllers.Solar_System;
-using AA.Solar_System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace AA.Models
+namespace AA.Solar_System
 {
-    public class SolarSystemViewModel
+    public class SSdata
     {
+        public void GetData()
+        {
+        }
+        public IEnumerable<SSdata> SolarSystem { get; set; }
+
         [JsonProperty("id")]
         public string id { get; set; }
 
@@ -33,26 +34,5 @@ namespace AA.Models
         [JsonProperty("discoveryDate")]
         public string discoveryDate { get; set; }
     }
-
-    //    public IEnumerator<SolarSystemData> GetEnumerator()
-    //    {
-    //        return SolarSystemData.GetEnumerator();
-    //    }
-
-    //    IEnumerator IEnumerable.GetEnumerator()
-    //    {
-    //        return Bodies.GetEnumerator();
-    //    }
-
-    //    public IEnumerable<SolarSystemData> SolarSystemData { get; set; }
-
-
-
-
-
-
 }
-
-
-
 

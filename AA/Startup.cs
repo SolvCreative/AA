@@ -1,4 +1,3 @@
-using AA.Controllers.Solar_System;
 using AA.Facts_Generator;
 using AA.NEO_Locator;
 using AA.Solar_System;

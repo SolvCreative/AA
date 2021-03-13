@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
 namespace AA.Solar_System
 {
-    public class Data
+    public class Data : SSdata
     {
-        public IEnumerable<SolarSystemData> Bodies { get; set; }
-
-       
+        public IEnumerable<SSdata> Bodies { get; set; }
     }
 }
+
